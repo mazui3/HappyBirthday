@@ -280,14 +280,14 @@ export default function App() {
             initial={{ opacity: 0, y: -70, scale: 0.9 }}
             animate={{ opacity: 1, y: 16, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
-            className="fixed top-4 bg-purple-600 text-white px-6 py-3.5 rounded-2xl shadow-xl border border-purple-400/40 z-50 flex items-center gap-3 backdrop-blur-md max-w-sm mx-4"
+            className="fixed top-4 bg-pink-500 text-white px-6 py-3.5 rounded-2xl shadow-xl border border-pink-300/40 z-50 flex items-center gap-3 backdrop-blur-md max-w-sm mx-4"
           >
-            <div className="p-1.5 bg-purple-500 rounded-full animate-bounce">
+            <div className="p-1.5 bg-pink-400 rounded-full animate-bounce">
               <Sparkles className="w-5 h-5 text-yellow-300" />
             </div>
             <div>
               <p className="font-bold text-sm tracking-wide">🔓 秘密通道已开启！</p>
-              <p className="text-xs text-purple-200">输入了魔法上上下下左右左右 🌟</p>
+              <p className="text-xs text-pink-100">输入了魔法上上下下左右左右 🌟</p>
             </div>
           </motion.div>
         )}
@@ -419,8 +419,7 @@ export default function App() {
               </button>
 
               <div className="text-center">
-                <h2 className="text-3xl font-bold font-serif-cn text-purple-900 tracking-wide">只给你的信</h2>
-                <p className="text-xs text-purple-400 mt-1">~only for you~</p>
+                <h2 className="text-3xl font-bold text-pink-500 tracking-wide">只给你的信</h2>
               </div>
 
               {/* Toolbar */}
@@ -430,8 +429,8 @@ export default function App() {
                   onClick={toggleMusic}
                   className={`p-3 rounded-full flex items-center justify-center transition-all shadow-md group ${
                     isMusicPlaying 
-                      ? 'bg-purple-600 text-white animate-spin-slow' 
-                      : 'bg-white text-purple-600 hover:bg-purple-50'
+                      ? 'bg-pink-500 text-white animate-spin-slow' 
+                      : 'bg-white text-pink-500 hover:bg-pink-50'
                   }`}
                   title={isMusicPlaying ? '暂停背景轻音乐' : '开启轻柔心灵音乐'}
                 >
@@ -447,17 +446,17 @@ export default function App() {
                   initial={{ opacity: 0, scaleY: 0 }}
                   animate={{ opacity: 1, scaleY: 1 }}
                   exit={{ opacity: 0, scaleY: 0 }}
-                  className="mb-8 p-3 bg-purple-50/80 rounded-2xl flex items-center justify-between border border-purple-100 backdrop-blur-sm px-6"
+                  className="mb-8 p-3 bg-pink-50/80 rounded-2xl flex items-center justify-between border border-pink-100 backdrop-blur-sm px-6"
                 >
                   <div className="flex items-center gap-2">
-                    <Volume2 className="w-4 h-4 text-purple-600 animate-bounce" />
-                    <span className="text-xs text-purple-700 font-mono">正在为你演奏八音盒：《温暖旋律》</span>
+                    <Volume2 className="w-4 h-4 text-pink-500 animate-bounce" />
+                    <span className="text-xs text-pink-700 font-mono">正在为你演奏八音盒：《温暖旋律》</span>
                   </div>
                   <div className="flex gap-1 h-5 items-end">
                     {[...Array(6)].map((_, i) => (
                       <motion.div
                         key={i}
-                        className="w-1 bg-purple-400 rounded-full"
+                        className="w-1 bg-pink-400 rounded-full"
                         animate={{ height: isMusicPlaying ? [4, 20, 4] : 4 }}
                         transition={{
                           duration: 0.6 + i * 0.15,
@@ -513,17 +512,9 @@ export default function App() {
                   transition={{ delay: 0.2 }}
                   className="vintage-paper p-8 rounded-3xl polaroid-shadow border border-orange-100/30 relative flex-1 min-h-[450px]"
                 >
-                  {/* Watermark of pink rose shape */}
-                  <div className="absolute right-6 bottom-16 opacity-[0.03] pointer-events-none select-none">
-                    <Heart className="w-64 h-64 text-pink-500" />
-                  </div>
 
                   {/* BEAUTIFUL DISPLAY LETTER */}
                   <div className="flex flex-col h-full font-serif-cn leading-relaxed tracking-wide text-gray-800 z-10 relative">
-                    {/* Wax seal ornament element */}
-                    <div className="absolute right-0 top-0 w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center border-2 border-dashed border-pink-300 transform rotate-12 opacity-80">
-                      <Heart className="w-5 h-5 text-pink-500 fill-pink-300" />
-                    </div>
 
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 font-serif-cn border-b border-orange-100 pb-2">
                       {salutation}
@@ -575,7 +566,7 @@ export default function App() {
 
             {/* Bottom hidden keycode reminder summary details */}
             <div className="mt-16 text-center text-gray-400 text-xs font-mono max-w-sm mx-auto p-4 bg-gray-50 border border-gray-200/50 rounded-2xl select-none leading-relaxed">
-              🔑 秘密：已安全开启
+              🔑 已安全开启
             </div>
           </motion.div>
         )}
